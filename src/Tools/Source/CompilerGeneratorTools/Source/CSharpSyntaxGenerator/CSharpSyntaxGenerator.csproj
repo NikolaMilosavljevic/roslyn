@@ -19,6 +19,15 @@
     <!-- Make sure to reference the same version of Microsoft.CodeAnalysis.Analyzers as the rest of the build -->
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="$(MicrosoftCodeAnalysisAnalyzersVersion)" PrivateAssets="all" />
   </ItemGroup>
+  <ItemGroup Condition="'$(DotNetBuildFromSource)' == 'true' and '$(TargetFramework)' == 'netstandard2.0'">
+    <!--
+      For source build we need to ensure that we use source-built ref-only packages that Microsoft.CodeAnalysis.Common depends on.
+    -->
+    <PackageReference Include="System.Collections.Immutable" Version="$(RefOnlySystemCollectionsImmutableVersion)" PrivateAssets="all" />
+    <PackageReference Include="System.Reflection.Metadata" Version="$(RefOnlySystemReflectionMetadataVersion)" PrivateAssets="all" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="$(RefOnlySystemRuntimeCompilerServicesUnsafeVersion)" PrivateAssets="all" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="$(RefOnlySystemTextEncodingCodePagesVersion)" PrivateAssets="all" />
+  </ItemGroup>
   <ItemGroup>
     <!-- If we're building the command line tool, we have to include some dependencies used for grammar generation -->
     <Compile Include="..\..\..\..\..\Compilers\Core\Portable\Symbols\WellKnownMemberNames.cs" Link="Grammar\WellKnownMemberNames.cs" Condition="'$(TargetFramework)' != 'netstandard2.0'" />
