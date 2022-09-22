@@ -291,17 +291,7 @@
     <SystemCollectionsImmutableVersion>6.0.0</SystemCollectionsImmutableVersion>
     <SystemReflectionMetadataVersion>5.0.0</SystemReflectionMetadataVersion>
     <MicrosoftBclAsyncInterfacesVersion>6.0.0</MicrosoftBclAsyncInterfacesVersion>
-    <!--
-      Consumed by source build, in CSharpSyntaxGenerator project.
-      For source build, we need to explicitly reference all dependencies of Microsoft.CodeAnalysis.Common package
-      and use source-built reference-only packages.
-      Update these versions when SourceGeneratorMicrosoftCodeAnalysisVersion gets updated - it would also require a new
-      version of Microsoft.CodeAnalysis.Common in dotnet/source-build-reference-packages.
-    -->
-    <RefOnlySystemCollectionsImmutableVersion>5.0.0</RefOnlySystemCollectionsImmutableVersion>
-    <RefOnlySystemReflectionMetadataVersion>5.0.0</RefOnlySystemReflectionMetadataVersion>
-    <RefOnlySystemRuntimeCompilerServicesUnsafeVersion>5.0.0</RefOnlySystemRuntimeCompilerServicesUnsafeVersion>
-    <RefOnlySystemTextEncodingCodePagesVersion>4.5.1</RefOnlySystemTextEncodingCodePagesVersion>
+    <RefOnlyMicrosoftCodeAnalysisCommonVersion>4.1.0</RefOnlyMicrosoftCodeAnalysisCommonVersion>
   </PropertyGroup>
   <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
     <UsingToolVSSDK>true</UsingToolVSSDK>
