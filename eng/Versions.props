@@ -291,6 +291,11 @@
     <SystemCollectionsImmutableVersion>6.0.0</SystemCollectionsImmutableVersion>
     <SystemReflectionMetadataVersion>5.0.0</SystemReflectionMetadataVersion>
     <MicrosoftBclAsyncInterfacesVersion>6.0.0</MicrosoftBclAsyncInterfacesVersion>
+    <!--
+      Consumed by source build, in CSharpSyntaxGenerator project.
+      For source build, We need to consume reference assemblies built in dotnet/source-build-reference-packages.
+    -->
+    <RefOnlyMicrosoftCodeAnalysisCommon>4.0.1</RefOnlyMicrosoftCodeAnalysisCommon>
   </PropertyGroup>
   <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
     <UsingToolVSSDK>true</UsingToolVSSDK>
