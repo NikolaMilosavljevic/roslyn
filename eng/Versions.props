@@ -291,7 +291,7 @@
     <SystemCollectionsImmutableVersion>6.0.0</SystemCollectionsImmutableVersion>
     <SystemReflectionMetadataVersion>5.0.0</SystemReflectionMetadataVersion>
     <MicrosoftBclAsyncInterfacesVersion>6.0.0</MicrosoftBclAsyncInterfacesVersion>
-    <RefOnlyMicrosoftCodeAnalysisCommonVersion>4.1.0</RefOnlyMicrosoftCodeAnalysisCommonVersion>
+    <RefOnlyMicrosoftCodeAnalysisCommonVersion>4.0.1</RefOnlyMicrosoftCodeAnalysisCommonVersion>
   </PropertyGroup>
   <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
     <UsingToolVSSDK>true</UsingToolVSSDK>
