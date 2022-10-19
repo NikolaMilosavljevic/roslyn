@@ -238,7 +238,7 @@
     <SystemIOFileSystemVersion>4.3.0</SystemIOFileSystemVersion>
     <SystemIOFileSystemPrimitivesVersion>4.3.0</SystemIOFileSystemPrimitivesVersion>
     <SystemIOPipesAccessControlVersion>5.0.0</SystemIOPipesAccessControlVersion>
-    <SystemIOPipelinesVersion>6.0.3</SystemIOPipelinesVersion>
+    <SystemIOPipelinesVersion Condition="'$(SystemIOPipelinesVersion)' == ''">6.0.3</SystemIOPipelinesVersion>
     <SystemManagementVersion>5.0.0-preview.8.20407.11</SystemManagementVersion>
     <SystemMemoryVersion>4.5.5</SystemMemoryVersion>
     <SystemResourcesExtensionsVersion>6.0.0</SystemResourcesExtensionsVersion>
